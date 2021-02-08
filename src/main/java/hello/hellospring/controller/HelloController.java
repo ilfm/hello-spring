@@ -22,13 +22,13 @@ public class HelloController {
     @GetMapping("hello-mvc")
     public String helloMvc(@RequestParam("name") String name, Model model)
     {
-        model.addAttribute("name",name);
+        model.addAttribute("name",name); 
 
         return "hello-templet";
     }
     // ResponseBody의 의미 응답을 BODY에 직접하겠다. HTML BODY(X) HTTP BODY ! 객체는 JSON 형태로 반환한다.
     // viewresoler가 아니라 HttpMessageConveter가 동작
-    // ResponseBody를 만나면
+    // ResponseBody를 만나면 ㅇ
     @GetMapping("hello-string")
     @ResponseBody
     public String helloString(@RequestParam("name") String name)
